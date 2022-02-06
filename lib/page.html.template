@@ -14,11 +14,11 @@ license that can be found in the LICENSE file.
 
   <body>
     <script>
-      var socket = new io.connect('<URL_TYPE>://' + window.location.host);
+      const socket = new io.connect('<URL_TYPE>://' + window.location.host);
       socket.on('data', function(data) {
-        var type = data.type;
+        const type = data.type;
         if (data.type === 'ENTRY_STATUS') {
-          var targetTD = document.getElementById(data.id);
+          const targetTD = document.getElementById(data.id);
           if (null != targetTD) {
             if (data.state === 'GREEN') {
               targetTD.style.background = 'green';
@@ -31,8 +31,12 @@ license that can be found in the LICENSE file.
         }
       });
 
-      var reset = function() {
+      const reset = function() {
         socket.emit('RESET');
+      }
+
+      const fill = function(group) {
+        socket.emit('FILL' + group);
       }
     </script>
     <table width="100%">
@@ -46,6 +50,13 @@ license that can be found in the LICENSE file.
       <tr><td span="100%">
         <button style="width:100%" align="center" onclick=reset()>Reset</button>
       </td></tr>
-    <table>
+      <tr span="100%"><td>
+        <table width = 100%>
+          <tr> 
+            <td span="50%"><button style="width:100%" onclick=fill(1)>Fill 1</button></td>
+            <td span="50%"><button style="width:100%" onclick=fill(2)>Fill 2</button></td>
+          </tr>
+      </td></tr>
+    </table>
   </body>
 </html>

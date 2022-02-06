@@ -3,6 +3,8 @@
   "serverPort": 3000,
   "mqttServerUrl": "mqtt:10.1.1.186:1883",
   "inactivityIntervalMinutes": 5,
+  "group1topic": "house/water/ctl",
+  "group2topic": "house/water2/ctl",
   "dashboardEntries": [ { "id": "tank1", "group": "0", "name": "Tank 1", "alertTopic": "house/water/0", "resetTopic": "", "delay": "0" },
                         { "id": "tank2", "group": "0", "name": "Tank 2", "alertTopic": "house/water/1", "resetTopic": "", "delay": "0" }, 
                         { "id": "tank3", "group": "0", "name": "Tank 3", "alertTopic": "house/water/2", "resetTopic": "", "delay": "0" }, 
