@@ -1,0 +1,40 @@
+{
+  "name": "micro-app-plant-dashboard",
+  "version": "0.0.1",
+  "description": "Dashboard to display hydroponic system status and generate alerts when appropriate",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node lib/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "micro-app-framework": "^0.1.1",
+    "mqtt": "^4.3.4",
+    "socket.io": "^4.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhdawson/micro-app-plant-dashboard.git"
+  },
+  "keywords": [
+    "iot",
+    "mqtt",
+    "dashboard",
+    "micro-app",
+    "sensor"
+  ],
+  "author": {
+    "name": "Michael Dawson"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhdawson/micro-app-plant-dashboard/issues"
+  },
+  "homepage": "https://github.com/mhdawson/micro-app-plant-dashboard#readme",
+  "contributors": [
+    {
+      "name": "Michael Dawson",
+      "email": "mdawson@devrus.com"
+    }
+  ]
+}

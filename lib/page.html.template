@@ -28,6 +28,9 @@ license that can be found in the LICENSE file.
               targetTD.style.background = 'red';
             }
           }
+        } else if (data.type === 'AUTOFILL_DATE') {
+          const targetTD = document.getElementById("lastFillDate");
+          targetTD.innerText = new Date(data.time).toDateString();
         }
       });
 
@@ -56,7 +59,9 @@ license that can be found in the LICENSE file.
             <td span="50%"><button style="width:100%" onclick=fill(1)>Fill 1</button></td>
             <td span="50%"><button style="width:100%" onclick=fill(2)>Fill 2</button></td>
           </tr>
+        </table>
       </td></tr>
+      <tr><td font-size="8px" id="lastFillDate" span="100%"></td></tr>
     </table>
   </body>
 </html>
