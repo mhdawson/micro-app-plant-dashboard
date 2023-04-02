@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "micro-app-framework": "^0.1.1",
+    "micro-app-notify-client": "^0.0.2",
     "mqtt": "^4.3.4",
     "socket.io": "^4.4.1"
   },
